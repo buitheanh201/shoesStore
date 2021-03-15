@@ -1,0 +1,10 @@
+.account_dropdown::after{
+    content: "";
+    border: 20px solid balck;
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #878787;
+    top: -10px;
+    right: 3px;
+}

@@ -1,0 +1,110 @@
+.banner{
+    height: 700px;
+    overflow: hidden;
+}
+.banner__box{
+    height: 700px;
+}
+.banner__boxImage>div{
+    opacity: 0;
+}
+.banner__boxImage>img{
+    opacity: 0;
+}
+.banner__introduce>p:first-child{
+    opacity: 0;
+}
+.banner__introduce>p:nth-child(2){
+    opacity: 0;
+}
+.banner__introduce>p:nth-child(3){
+    opacity: 0;
+}
+.banner__introduce>p:last-child{
+    opacity: 0;
+}
+.dots{
+    position: absolute;
+    bottom: 50px;
+    z-index: 15;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dotConfig{
+    width: 13px !important;
+    height: 13px !important;
+    background: black !important;
+}
+
+.dots>span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #949494;
+    margin: 0px 5px;
+    transition: .3s;
+}
+.product_gallery{
+    position: relative;
+    height: 430px;
+    margin: 10px 0px;
+}
+.checked_size{
+    width: 23px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAoCAYAAACB4MgqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1RDlCNUE2MjRCQjgxMUVBQTEyRkEwNENDMEQzMkE2MiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1RDlCNUE2MzRCQjgxMUVBQTEyRkEwNENDMEQzMkE2MiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVEOUI1QTYwNEJCODExRUFBMTJGQTA0Q0MwRDMyQTYyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVEOUI1QTYxNEJCODExRUFBMTJGQTA0Q0MwRDMyQTYyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+O8UzUAAAA0RJREFUeNrUmF1IU2EYx//vu6ObMnXT+Vmnm+wiYhFRpBWVJRFp0gfd6G4KupCQvgiKvq4iIbA06koKuiiKCIO8sCuzLxreKEL2KVZm6HTZckOd5/SclWTmcmc7m+c88LJn5z1n+51nz/s/739s981eGQYKBiaByUcFQ0EzFqCXShpNgoFKPcA52yFJslt5y41Rabw2yeYiSt1Tx7gB2qONm/laSnumH+c6h75dkCVupXR45hzXb0vz2nsusYrSsdnmNQXPtQqoK8/D8Y2OWMoc5IwfoOwkjbBSrZmq2FNMOFeag9w0AWYh6nr4GMdeSGiZ60RNwK3JHGdLs0PQgQkJl554onmw9AmMlwUhdURyfsytYhEYzmzJxiJbMiYmZdS2DuLd0Lha6E4L54rcdUR6TUzgSXT1iZJsFDrMmJRk1FGlu76OqVWORxkZKesp/azmurDgNgvHgvTwncQZcGyDA848C2RZxrUXw3B/Cqjtj0bnQrFM6W21RQsLfn5bLuor8rFrWfqs8weLM7FaTA3lN9q/ofXDqJoyy4yz05Qp6hGM5tcOC/7WM678jHCttKG6KBMm9mdu/yo7Ni22hvI7HSNo7vapYIbywS6lNrG0adheuPJsKLTYNhdaUbrEihzS6IuPB1G+NA1lNJRofuXD3c4RNdBembOdpM5tsYpCWHBixlXq235fEJUrMrA834KGigLYU02h+db3P3C93asGugempO2Qg91aSPCcqnK/6zupxRDG6U6moF9+9IduSkVTu1N/7e40gY74AfS81w/PaBA167LQ653A5aceSHLEcteUZROqAl74tdxeRPzkfEOLteZBvzq142hwVolHvjzsl7TehMVld6j4Qurpw5QeoiHF4zs0t27TfWE8t72CxqX+yxfGM7h2lf7XF+oeXPGFZo7imb5Q1+DTfKEXCYyYwKmfL/zPF+pvcSq+EKyaLGHjfJnpaMAj9oW6AVfrC3XR44ov5Ba2Ro0vnHdwgm757Qv79PKHEY+AutEpiuXR+ML5ASdfyBk7FYsvTPjiVHyhzNg+su+3oNMQ4ukLEwautS9MUI9r7wvjDq74QoddKKF0AAYJEg5e73SJeyj3w0DxU4ABAGYG7XZm8JELAAAAAElFTkSuQmCC) no-repeat left top;
+    background-size: 23px 20px;
+    z-index: 2;
+}
+.product_gallery img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cart{
+    min-height: 700px;
+}
+.footer{
+    background-color: #f484402b;
+}
+.footer__introduce{
+    display: flex;
+    background: #f48440;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 40px;
+    height: 70px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.categories{
+    margin: 20px 0px;
+}
+.categories>div>a{
+    width: 100%;
+    bottom: -3px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    background: #0c0603e3;
+    color: white;
+    border-radius: 5px;
+    display: block;
+}
+.categories>div:nth-child(4)>div>a>img{
+    width: 170px;
+}
+.categories>div:nth-child(3)>div>a>img{
+    width: 170px;
+}
+.categories>div:nth-child(5)>div>a>img{
+    width: 170px;
+}
+.categories>div:nth-child(6)>div>a>img{
+    width: 170px;
+}

@@ -1,0 +1,22 @@
+export const PATH =  {
+    HOME : '/',
+    SHOP : '/shop',
+    LOGIN : '/login',
+    REGISTER : '/register',
+    MANAGER : '/admin',
+    NEWS : '/news',
+    ABOUT : '/about',
+    CART : '/cart',
+    PROFILE : '/profile',
+    FAVOURITE : '/favourite',
+    CONTACT : '/contact',
+    MANAGER_PRODUCT : '/admin/products',
+    MANAGER_USER : '/admin/users',
+    ADD_PRODUCT : '/admin/products/add',
+    MANAGER_CATEGORY : '/admin/categories',
+    ADD_CATEGORY : '/admin/categories/add',
+    EDIT_CATEGORY : '/admin/categories/edit/:id',
+    DETAIL_PRODUCT : '/detail/:product&:id',
+    CATEGORY_DETAIAL : '/shop/brand/:name',
+    EDIT_PRODUCT : '/admin/products/edit/:id'
+}
