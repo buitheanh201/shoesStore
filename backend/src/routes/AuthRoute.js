@@ -14,7 +14,6 @@ route.post('/logingoogle',AuthController.loginWithGoogle)
 route.post('/existemail',AuthController.existEmail)
 
 //level 1 
-route.post('/signup',AuthController.signup)
 route.get('/',AuthController.findAll)
 route.get('/:id',AuthController.findOne)
 route.post('/',AuthController.register);
