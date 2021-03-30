@@ -4,7 +4,7 @@ const multerUpload = require('./../helpers/useMulter');
 
 route.get('/:id',ProductController.findOne);
 route.get('/',ProductController.findAll);
-route.post('/',multerUpload.array('galleryProduct',10),ProductController.create);
+route.post('/',ProductController.create);
 route.put('/:id',multerUpload.array('galleryProduct',10),ProductController.update);
 route.delete('/:id-:folderID',ProductController.delete)
 

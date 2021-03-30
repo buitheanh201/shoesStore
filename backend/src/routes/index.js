@@ -1,6 +1,7 @@
 const AuthRoute = require('./AuthRoute');
 const ProductRoute = require('./ProductRoute');
 const CategoryRoute = require('./CategoryRoute');
+const multer = require('./../helpers/useMulter');
 
 const init = (app) => {
     app.use('/api/v1/auth',AuthRoute);

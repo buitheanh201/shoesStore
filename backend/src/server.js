@@ -10,28 +10,32 @@ require('dotenv').config();
 //use body parse and parse json
 app.use(express.json())
 app.use(express.urlencoded({
-    extended : true
+    extended: true
 }))
 
 //use static file
-app.use(express.static(path.join(__dirname,'resources')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 //use cors
 app.use(cors({
-    origin : 'http://localhost:3000',
-    optionsSuccessStatus : 200
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200
 }))
 
 //connect to mongodb 
 database.connect()
-            .then(() => console.log('connect successfully !'))
-            .catch(() => console.log('connect error !'));
-
+    .then(() => console.log('connect successfully !'))
+    .catch((err) => console.log('connect error !' + err.message));
 
 //initial route
-route.init(app)
+route.init(app);
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../', 'public/index.html'));
+})
 
 
-app.listen(port,() => {
+
+app.listen(port, () => {
     console.log('server is running !')
 })

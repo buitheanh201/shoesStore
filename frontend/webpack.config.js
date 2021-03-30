@@ -53,8 +53,8 @@ module.exports = (env,argv) => {
         },
         output : {
             filename : 'static/js/bundle.[contenthash:4].js',
-            publicPath : '/',
-            path : path.join(__dirname,'build'),
+            publicPath : isDev ? '/' : '',
+            path : path.join(__dirname,'../backend/public'),
             environment : {
                 arrowFunction : false,
                 module : false,
@@ -71,7 +71,7 @@ module.exports = (env,argv) => {
             hot : true,
             port : 3000,
             historyApiFallback : true,
-            writeToDisk: true,
+            // writeToDisk: true,
         },
         plugins : [
             new DotEnv(),

@@ -21,6 +21,7 @@ function Home() {
                 setCategories(categories);
                 setNewProduct(newProducts);
                 setMostViews(mostViewedProduct);
+                console.log(mostViewedProduct);
             } catch (error) {
                 console.log(error);
             }
@@ -36,7 +37,7 @@ function Home() {
                     - BTA Shop | Sản phẩm mới cập nhật
                 </div>
                 <div className='flex flex-wrap'>
-                   {newProduct.map((item,key) => 
+                   {/* {newProduct.map((item,key) => 
                      <ProductItem 
                         key = {key}
                         name = {item.name}
@@ -45,13 +46,13 @@ function Home() {
                         link = {`/detail/${useSlug(item.name)}&${item._id}`}
                         image = {item.imageGallery[0].image}
                      />
-                   )}
+                   )} */}
                 </div>
                 <div className='font-medium py-10 text-2xl text-gray-700 mb-3'>
                     - BTA Shop | Sản phẩm xem nhiều nhất
                 </div>
                 <div className='flex flex-wrap'>
-                {mostViews.map((item,key) => 
+                {/* {mostViews.map((item,key) => 
                      <ProductItem 
                         key = {key}
                         name = {item.name}
@@ -60,20 +61,20 @@ function Home() {
                         link = {`/detail/${useSlug(item.name)}&${item._id}`}
                         image = {item.imageGallery[0].image}
                      />
-                   )}
+                   )} */}
                 </div>
                 <div className='font-medium py-10 text-2xl text-gray-700 mb-3'>
                     - BTA Shop | Mua sắm theo danh mục
                 </div>
                 <div className='flex flex-wrap'>
-                    {categories.map((item, key) =>
+                    {/* {categories.map((item, key) =>
                         <div key={key} className='category flex'>
                             <Link
                                 style={{ backgroundImage: `url(${item.categoryImage.avatar})` }}
                                 className='m-auto' to=''>
                             </Link>
                         </div>
-                    )}
+                    )} */}
                 </div>
             </div>
         </div>

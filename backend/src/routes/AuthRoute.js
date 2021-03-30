@@ -6,7 +6,7 @@ const upload = require('./../helpers/useMulter');
 
 route.post('/:id/cart',AuthController.addToCart);
 route.put('/:id/cart/:idproduct',AuthController.editCart);
-route.delete('/:id/cart/:idproduct',AuthController.removeItemCart)
+route.delete('/:id/cart/:idproduct',AuthController.removeItemCart);
 
 route.post('/login',AuthController.login)
 route.post('/loginfacebook',AuthController.loginWithFB)

@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { v4: uuid } = require('uuid');
 const { createFolder, authCredentials, authorize, createFile } = require('./../../helpers/useDrive');
-const UserModel = require('./../models/userModel');
 
 class AuthController {
     async login(req, res) {
@@ -95,6 +94,7 @@ class AuthController {
 
     }
     async existEmail(req, res) {
+        console.log('ok')
         const { email } = req.body;
         try {
             const existAccount = await AuthModel.find({ email })
