@@ -2,7 +2,7 @@ import axios from 'axios';
 import queryString from 'query-string';
 
 const axiosClient = axios.create({
-    baseURL : process.env.API_URL,
+    baseURL : 'https://theanhbui-ecommerce.herokuapp.com/api/v1',
     headers : {
         'content-type' : 'application/json'
     },

@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "outDir": "build",
+        "module": "CommonJS",
+        "target": "ES5",
+        "moduleResolution": "Node",
+        "baseUrl": ".",
+        "paths": {
+            "routes/*" : ["src/routes/*"],
+            "middlewares/*" : ["src/middlewares/*"],
+            "controllers/*" : ["src/app/controllers/*"],
+            "models/*" : ["src/app/models/*"],
+            "helpers/*" : ["src/helpers/*"],
+            "types/*" : ["src/@types/*"],
+            "src/*" : ["src/*"]
+        },
+        "esModuleInterop": true,
+        "allowJs": true,
+        "noImplicitAny": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
