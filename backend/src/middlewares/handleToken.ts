@@ -26,7 +26,7 @@ export const accessToken = (req: Request | any, res: Response, next: NextFunctio
             //         next();
             //     })  
             // }
-            res.status(200).json({ message : 'json web token is Incorrect'})
+            res.status(200).json({ message : 'token is expired !'})
         }
     }else return res.status(400).json({ message : 400 , data : 'Authorization header is not define !'})
 }

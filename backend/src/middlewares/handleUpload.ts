@@ -19,6 +19,6 @@ const diskStorage = multer.diskStorage({
     },
 });
 
-const initialStorage: Multer = multer({ storage: diskStorage });
+const initialStorage: Multer = multer({ storage: diskStorage ,limits : { fileSize : 1 * 1024 * 1024} });
 
 export default initialStorage;

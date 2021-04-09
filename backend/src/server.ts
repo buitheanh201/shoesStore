@@ -1,4 +1,4 @@
-import express, { Application } from 'express';
+import express, { Application,Request,Response } from 'express';
 import DotEnv from 'dotenv';
 import cors from 'cors';
 import path from 'path';

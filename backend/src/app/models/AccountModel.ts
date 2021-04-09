@@ -46,7 +46,7 @@ const account: Schema = new Schema(
 );
 
 account.pre('save', async function (this: IAccount | any, next) {
-    console.log('function is run !');
+    // console.log('function is run !');
     //console.log(this.isModified('password'));
     //return next if password not change !
     if (!this.isModified('password')) return next();
@@ -55,8 +55,10 @@ account.pre('save', async function (this: IAccount | any, next) {
     this.password = passwordHash;
 })
 
-account.methods.verifyPassword = function(this : IAccount | any ,passwordHashed){
-    return bcrypt.compareSync(passwordHashed,this.password);
+account.methods = {
+    verifyPassword : function(this : IAccount | any ,passwordHashed){
+        return bcrypt.compareSync(passwordHashed,this.password);
+    }
 }
 
 export default mongoose.model('accounts', account);

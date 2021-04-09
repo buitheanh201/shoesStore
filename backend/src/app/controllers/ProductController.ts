@@ -61,12 +61,34 @@ class ProductController {
     //     }
     // }
     async update(req : Request | any, res : Response ) {
-        const { files } = req; 
+        const FileRequest = req.files;
         let product = req.product;
-        //check files.length when upload file 
-        if(files.length > 0){
-            
+        const productGallery : any = product.imageGallery;
+        if(FileRequest.length > 0){
+            await Promise.all(productGallery.map((item : any) => deleteFile(item._id)));
+            const File : IResponseFile[] = await Promise.all(
+                FileRequest.map((file :Express.Multer.File) => {
+                    return createFile(file.originalname,product.folderID)
+                })
+            )
+            var imageGallery : any = File.map(item => 
+                ({ _id : item.data.id , image : item.data.webContentLink })
+            ) 
         }
+        if(FileRequest) product = _.assignIn(product,{ imageGallery });
+        product = _.assignIn(product,req.body);
+        //check files.length when upload file 
+        product.save((err : CallbackError ,docs : Document<IProduct>) => {
+            if(err){
+                return res.status(500).json({
+                    message : 'Server is error'
+                })
+            }
+            return res.status(200).json({
+                message : 'Update Successfully !',
+                data : docs
+            })
+        })
     }
 }
 

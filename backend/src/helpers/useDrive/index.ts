@@ -97,7 +97,7 @@ export async function createFolder<T>(folderName: string, parentFolderID: string
     }
 }
 
-export const createFile = async(fileName: string, folderID: string) => {
+export const createFile = async(fileName: string, folderID: string | any) => {
     const auth = await authorize();
     const drive = google.drive({ version: 'v3', auth });
     try {
